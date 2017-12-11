@@ -1,0 +1,7 @@
+$channelAPI = json_decode(file_get_contents('https://api.twitch.tv/kraken/channels/xxxxxxxxxxxxx;    
+$lastfollower = JSON Query of https://api.twitch.tv/kraken/channels/xxxxxxxxxxxxx/follows?&limit=1&offset=0
+$Lastfollowercount = $currentfollowercount;
+$currentfollowercount = $channelAPI->followers;
+
+if ($lastfollowercount > $currentfollowercount) {
+}

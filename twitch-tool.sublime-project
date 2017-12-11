@@ -1,0 +1,23 @@
+{
+	"build_systems":
+	[
+		{
+			"cmd":
+			[
+				"python",
+				"app.py"
+			],
+			"name": "twitch-tool-run",
+			"shell": true
+		}
+	],
+	"folders":
+	[
+		{
+			"path": "."
+		},
+		{
+			"path": "C:\\Python34\\Lib\\site-packages\\pydle"
+		}
+	]
+}

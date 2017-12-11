@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{57915bf7-5f9d-4525-9c5f-5ddccaa17213}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile>app.py</StartupFile>
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId>{2af0f10d-7135-4994-9156-5d01c9c11b7e}</InterpreterId>
+    <InterpreterVersion>3.4</InterpreterVersion>
+    <IsWindowsApplication>True</IsWindowsApplication>
+    <EnableNativeCodeDebugging>False</EnableNativeCodeDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+    <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="app.py" />
+    <Compile Include="Authentication.py" />
+    <Compile Include="AutoMessage.py" />
+    <Compile Include="Chat.py" />
+    <Compile Include="Commands.py" />
+    <Compile Include="pydle\async.py" />
+    <Compile Include="pydle\client.py" />
+    <Compile Include="pydle\connection.py" />
+    <Compile Include="pydle\features\account.py" />
+    <Compile Include="pydle\features\ctcp.py" />
+    <Compile Include="pydle\features\ircv3\cap.py" />
+    <Compile Include="pydle\features\ircv3\ircv3_1.py" />
+    <Compile Include="pydle\features\ircv3\ircv3_2.py" />
+    <Compile Include="pydle\features\ircv3\metadata.py" />
+    <Compile Include="pydle\features\ircv3\monitor.py" />
+    <Compile Include="pydle\features\ircv3\sasl.py" />
+    <Compile Include="pydle\features\ircv3\tags.py" />
+    <Compile Include="pydle\features\ircv3\__init__.py" />
+    <Compile Include="pydle\features\isupport.py" />
+    <Compile Include="pydle\features\rfc1459\client.py" />
+    <Compile Include="pydle\features\rfc1459\parsing.py" />
+    <Compile Include="pydle\features\rfc1459\protocol.py" />
+    <Compile Include="pydle\features\rfc1459\__init__.py" />
+    <Compile Include="pydle\features\tls.py" />
+    <Compile Include="pydle\features\whox.py" />
+    <Compile Include="pydle\features\__init__.py" />
+    <Compile Include="pydle\protocol.py" />
+    <Compile Include="pydle\utils\console.py" />
+    <Compile Include="pydle\utils\irccat.py" />
+    <Compile Include="pydle\utils\run.py" />
+    <Compile Include="pydle\utils\_args.py" />
+    <Compile Include="pydle\utils\__init__.py" />
+    <Compile Include="pydle\__init__.py" />
+    <Compile Include="twitch\api\parameters.py" />
+    <Compile Include="twitch\api\usher.py" />
+    <Compile Include="twitch\api\v2\__init__.py" />
+    <Compile Include="twitch\api\v3\blocks.py" />
+    <Compile Include="twitch\api\v3\channels.py" />
+    <Compile Include="twitch\api\v3\chat.py" />
+    <Compile Include="twitch\api\v3\follows.py" />
+    <Compile Include="twitch\api\v3\games.py" />
+    <Compile Include="twitch\api\v3\ingests.py" />
+    <Compile Include="twitch\api\v3\root.py" />
+    <Compile Include="twitch\api\v3\search.py" />
+    <Compile Include="twitch\api\v3\streams.py" />
+    <Compile Include="twitch\api\v3\subscriptions.py" />
+    <Compile Include="twitch\api\v3\teams.py" />
+    <Compile Include="twitch\api\v3\users.py" />
+    <Compile Include="twitch\api\v3\videos.py" />
+    <Compile Include="twitch\api\v3\__init__.py" />
+    <Compile Include="twitch\api\__init__.py" />
+    <Compile Include="twitch\exceptions.py" />
+    <Compile Include="twitch\keys.py" />
+    <Compile Include="twitch\logging.py" />
+    <Compile Include="twitch\parser.py" />
+    <Compile Include="twitch\queries.py" />
+    <Compile Include="twitch\scraper.py" />
+    <Compile Include="twitch\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="{2af0f10d-7135-4994-9156-5d01c9c11b7e}\3.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="pydle\" />
+    <Folder Include="pydle\features\" />
+    <Folder Include="pydle\features\ircv3\" />
+    <Folder Include="pydle\features\rfc1459\" />
+    <Folder Include="pydle\utils\" />
+    <Folder Include="twitch\" />
+    <Folder Include="twitch\api\" />
+    <Folder Include="twitch\api\v2\" />
+    <Folder Include="twitch\api\v3\" />
+  </ItemGroup>
+  <Import Project="$(PtvsTargetsFile)" Condition="Exists($(PtvsTargetsFile))" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="!Exists($(PtvsTargetsFile))" />
+</Project>
